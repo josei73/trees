@@ -1,0 +1,17 @@
+INPUT(a)
+INPUT(b)
+INPUT(c)
+
+OUTPUT(normal_nand)
+OUTPUT(and_with_not)
+OUTPUT(iterativ_nand)
+OUTPUT(diff_normal_nand_and_with_not)
+OUTPUT(diff_normal_nand_iterativ_nand)
+
+normal_nand = NAND(a,b,c)
+normal_and = AND(a,b,c)
+and_with_not = NOT(normal_and)
+x1 = NAND(a,b)
+iterativ_nand = NAND(x1,c)
+diff_normal_nand_and_with_not = XOR(normal_nand,and_with_not)
+diff_normal_nand_iterativ_nand = XOR(normal_nand,iterativ_nand)

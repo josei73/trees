@@ -1,0 +1,17 @@
+INPUT(a)
+INPUT(b)
+INPUT(c)
+
+OUTPUT(normal_nor)
+OUTPUT(or_with_not)
+OUTPUT(iterativ_nor)
+OUTPUT(diff_normal_nor_or_with_not)
+OUTPUT(diff_normal_nor_iterativ_nor)
+
+normal_nor = NOR(a,b,c)
+normal_or = OR(a,b,c)
+or_with_not = NOT(normal_or)
+x1 = NOR(a,b)
+iterativ_nor = NOR(x1,c)
+diff_normal_nor_or_with_not = XOR(normal_nor,or_with_not)
+diff_normal_nor_iterativ_nor = XOR(normal_nor,iterativ_nor)
